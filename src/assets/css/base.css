@@ -1,0 +1,597 @@
+
+/* 基础重置
+---------------------*/
+a, abbr, address, article, aside, audio, b, blockquote,button, body, caption, cite, code, dd, del, dfn, dialog, div, dl, dt, em, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video, textarea, input{border: 0; margin: 0; outline: 0; padding: 0; font-size: 100%;box-sizing: border-box;}
+a:hover{text-decoration:none;}
+a{text-decoration:none;}
+html, body{-webkit-text-size-adjust: none; font-family:"microsoft yahei";min-width:1200px;background:#f5f5f5;/*重置chrome字体*/}
+/* -- 去除chrome浏览器默认设置 -- */
+textarea{resize: none; overflow: auto;}
+input, button, select, textarea{outline: none; border:none;background-color: transparent;font-family:"microsoft yahei";}
+input, select{vertical-align: middle; border: 1px solid #ececec;}
+b, strong{font-weight: bold;}
+img{font-size: 0; border: none; vertical-align: top;}
+a{color:#666;}
+table{border-collapse: collapse; border-spacing: 0;}
+th, td, caption{vertical-align: middle; text-align: left;}
+ul, li{list-style: none;}
+i{
+    font-style:normal;
+}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#BBB;
+    font-family:"microsoft yahei";
+    font-size:14px!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#BBB;
+    font-family:"microsoft yahei";
+    font-size:14px!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#BBB;
+    font-family:"microsoft yahei";
+    font-size:14px!important;
+}
+/* 浮动 */
+.fl{float: left;}
+.fr{float: right;}
+
+/* 清除浮动 */
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfix{zoom:1;}
+
+
+/* 版心 */
+.banxin{
+    width:1200px;
+    margin:0 auto;
+}
+/* 版心 */
+/* 公共样式 */
+.mt30{
+    margin-top: 30px;
+}
+.backgroundFFF{
+    background:#fff;
+}
+.mainColor1{
+    color:#ff9900;
+}
+.mianColor2 {
+    color: #ffbb20 !important;
+}
+.color666{
+    color:#666;
+}
+.background-FFF{
+    background:#fff;
+}
+.dib{
+    display:inline-block;
+    vertical-align: top;
+}
+/* 头部样式 */
+.header{
+    background: #fafafa;
+    height: 30px;
+    border-bottom: 1px solid #ececec;
+    line-height: 29px;
+   /*  overflow: hidden; */
+}
+.header .warn{
+    color:#999;
+    font-size:12px;
+    line-height: 27px;
+
+}
+.header .warn i{
+    display:inline-block;
+    width:18px;
+    height:30px;
+    background: url(../../assets/images/index/headerIocn.png) center center no-repeat;
+    background-size:18px 15px;
+    vertical-align:middle;
+    margin-right: 7px;
+    position: relative;
+    top: -2px;
+}
+.header .headerNav{
+
+}
+.header .loginBtn,.header .registerBtn{
+    color:#ff8e0e;
+    font-size:12px;
+
+}
+.header .registerBtn{
+
+}
+.header .space{
+    height: 12px;
+    width: 7px;
+    margin-right: 4px;
+    display: inline-block;
+    border-right: 1px solid #e5e5e5;
+    position: relative;
+    top: 2px;
+}
+.header .helperBtn{
+    margin-right: 16px;
+    font-size:12px;
+    color:#999;
+}
+.header .IpApp{
+    display: inline-block;
+    width: 85px;
+    height: 27px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    color: rgba(153,153,153,0.99);
+    position:relative;
+    z-index: 1;
+}
+.IpApp div {
+    display: none;
+}
+.IpApp:hover div {
+    display: block;
+    animation: Mover 0.1s linear;
+}
+@keyframes Mover {
+    0% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+.loginYes{
+    font-size:12px;
+    color:#999;
+}
+.header .IpApp span{
+    font-size:12px;
+}
+.header .IpApp i{
+    display:inline-block;
+    width:10px;
+    height:25px;
+    background: url(../../assets/images/index/mobilePhoneIcon.png) center center no-repeat;
+    margin-right: 2px;
+    vertical-align:middle;
+    position: relative;
+    top: -1px;
+}
+/* 头部样式 */
+/* 导航样式 */
+.nav{
+    height:101px;
+    background:#fff;
+    border-bottom:1px solid #ececec;
+
+}
+.nav .logo{
+    position:relative;
+}
+.nav .logo img{
+    position:relative;
+    top:14px;
+}
+.nav .logo img.logoText {
+    position: absolute;
+    top: 32px;
+    right: 22px;
+    animation: headeranimation 2s ease-out 0.2s forwards;
+}
+
+@keyframes headeranimation {
+    0% {
+        transform: translate(160px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+.nav .navList{
+
+}
+.nav .navList li a.router-link-exact-active{
+    color: #ff9920;
+}
+.nav .navList li{
+    float:left;
+    line-height:100px;
+    margin-right: 50px;
+
+}
+.nav .navList li a{
+    font-size: 18px;
+    color: #333;
+}
+.nav .navList li a:hover{
+    color: #ff9920;
+}
+.nav .navList li.last{
+    margin-right: 0px;
+    height:35px;
+    line-height:33px;
+    text-align:center;
+    position:relative;
+    top:33px;
+    width: 114px;
+    border:1px solid #f2f2f2;
+}
+.nav .navList li.last a{
+    font-size:16px;
+}
+.nav .navList li.last:hover{
+     border:1px solid #ff9920;
+}
+.nav .navList li.last:hover a{
+     color: #ff9920;
+}
+.nav .navList li.last i{
+    display:inline-block;
+    width:16px;
+    height:35px;
+    background: url(../../assets/images/index/userCenterIcon.png) center center no-repeat;
+    vertical-align:middle;
+    position:relative;
+    top:-2px;
+}
+.nav .navList li.last:hover i{
+     background: url(../../assets/images/index/userCenterIconHover.png) center center no-repeat;
+
+}
+/* 导航样式 */
+/* 尾部 */
+.footer{
+    background:#fff;
+    padding-top: 54px;
+ /*    margin-top: 50px; */
+    padding-bottom:20px;
+}
+.footer .knowUs{
+    margin-right: 50px;
+}
+.footer .knowUs h4{
+    font-size:16px;
+    color:#a0a0a0;
+    padding-bottom: 14px;
+}
+.footer .knowUs p{
+    color:#a0a0a0;
+    padding-bottom:8px;
+
+}
+.footer .knowUs p a{
+    margin-right: 52px;
+    color:#a0a0a0;
+    font-size:14px;
+}
+.footer .aboutUs{
+
+}
+.footer .aboutUs h4{
+    font-size:16px;
+    color:#a0a0a0;
+    padding-bottom: 14px;
+}
+.footer .aboutUs p{
+    color:#a0a0a0;
+    padding-bottom:8px;
+    font-size:14px;
+
+}
+.footer .callUs {
+}
+
+.footer .callUs p {
+    text-align: right;
+}
+
+.footer .callUs .call {
+    font-size: 32px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.footer .callUs .call .iphonIcon {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../../assets/images/index/headerPhoneIocn.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.footer .callUs .time {
+    color: #9f9f9f;
+    font-size: 12px;
+}
+.footer  .share{
+    padding-top: 18px;
+}
+.footer  .share span,.footer  .share a{
+    display:inline-block;
+    width: 30px;
+    height:30px;
+    border-radius:50%;
+    position:relative;
+    cursor:pointer;
+
+}
+.footer  .share span i{
+    width: 138px;
+    height:138px;
+    position:absolute;
+    top: -148px;
+    left: -54px;
+    height: 0;
+    transition: height .25s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.footer  .share .weixin{
+    background:url(../../assets/images/index/weixin.png) no-repeat;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.footer  .share .weibo{
+    background:url(../../assets/images/index/weibo.png) no-repeat;
+}
+.footer  .share .Iphon{
+    background:url(../../assets/images/index/Iphon.png) no-repeat;
+}
+
+
+.footer  .share .weixin:hover{
+    background:url(../../assets/images/index/weixinHover.png) no-repeat;
+
+}
+.footer  .share .weixin:hover i{
+    background:url(../../assets/images/index/weixinScan.jpg) no-repeat;
+    background-size:138px;
+    height:138px;
+}
+
+.footer  .share .weibo:hover{
+    background:url(../../assets/images/index/weiboHover.png) no-repeat;
+
+}
+/* .footer  .share .weibo:hover i{
+    background:url(../../assets/images/index/weixinScan.jpg) no-repeat;
+    background-size:138px;
+    height:138px;
+}
+ */
+.footer  .share .Iphon:hover{
+    background:url(../../assets/images/index/IphonHover.png) no-repeat;
+}
+.footer  .share .Iphon:hover i{
+    background:url(../../assets/images/index/weixinScan.jpg) no-repeat;
+    background-size:138px;
+    height:138px;
+}
+
+.footer  .link{
+    background:#f5f5f5;
+    line-height: 26px;
+    border-left:2px solid #d1d1d1;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 55px;
+}
+.footer  .link span{
+    font-size:12px;
+    color:#999;
+
+}
+.footer  .link span i{
+    position: relative;
+    top: 7px;
+    display:inline-block;
+    border:7px solid #999;
+    border-color:#999 transparent  transparent transparent;
+
+}
+.footer  .link span:last-child{
+    margin-right: 8px;
+    color:#999;
+    cursor:pointer;
+    margin-right: -45px;
+}
+.footer  .link a{
+    font-size:12px;
+    color:#999;
+    margin-right: 15px;
+}
+.copyRight {
+    margin-top: 13px;
+    border-top: 1px solid #f5f5f5;
+    line-height: 40px;
+    position: relative;
+}
+
+.copyRight span {
+    color: #999;
+    font-size: 12px;
+}
+
+.copyRight .thrplatform {
+    position: absolute;
+    right: 0px;
+}
+
+.copyRight .thrplatform a {
+    display: inline-block;
+    width: 62px;
+    height: 22px;
+    background: url(../../assets/images/index/thrplatform.png) no-repeat;
+    vertical-align: middle;
+}
+
+.copyRight .thrplatform .cfca {
+    background-position: -472px 0px;
+}
+
+.copyRight .thrplatform .cert {
+    background-position: -133px 0px;
+}
+
+.copyRight .thrplatform .kxw {
+    background-position: -201px 0px;
+}
+
+.copyRight .thrplatform .webscan {
+    background-position: -68px 0px;
+}
+
+.copyRight .thrplatform .business {
+    background-position: -336px 0px;
+}
+
+.copyRight .thrplatform .gdnet110 {
+    background-position: -0px 0px;
+}
+
+
+/* 尾部 */
+
+/*旋转动画效果 begin*/
+@keyframes fx_animate {
+100% { transform: rotateY(360deg); }
+}
+
+@-moz-keyframes fx_animate {
+100% { transform: rotateY(360deg); }
+}
+/* Firefox */
+@-webkit-keyframes fx_animate {
+100% { transform: rotateY(360deg); }
+}
+/* Safari and Chrome */
+@-o-keyframes fx_animate {
+100% { transform: rotateY(360deg); }
+}
+/*旋转动画效果 begin*/
+/* 滑动条样式 start*/
+.newWelfareSliderBG {
+    margin-top: 25px;
+}
+
+.sliderBG {
+    width: 209px;
+    background: #f5f5f5;
+    height: 3px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.sliderColor {
+    position: absolute;
+    width: 45%;
+    background: #ffbb20;
+    height: 3px;
+    border-radius: 2px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.slidePercent {
+    position: absolute;
+    right: -45px;
+    font-size: 14px;
+    color: #ffbb20;
+    top: -9px;
+}
+/* 滑动条样式 end*/
+/* 导航位置样式  投资页面，投资详情页面，体验标。体验标详情。帮助中心页面， */
+.navigationSite {
+    height: 38px;
+    line-height: 38px;
+    color: #999;
+    font-size: 12px;
+}
+
+.navigationSite a {
+    color: #999;
+    font-size: 12px;
+}
+
+.navigationSite > span.currentSize {
+    margin-right: 5px;
+    font-size:12px;
+    color:#999;
+}
+
+.navigationSite > span.spacingLine {
+    font-size:12px;
+    font-family: SimSun,'Microsoft YaHei';
+    margin: 0 6px;
+}
+/* 导航位置样式  投资页面，投资详情页面，体验标。体验标详情。帮助中心页面， */
+/* 分页样式 */
+.el-pagination {
+    margin-top:20px;
+    text-align: center;
+}
+.el-pager li {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    font: normal 12px/17px 'Microsoft YaHei';
+    overflow: hidden;
+    padding: 5px 15px;
+    zoom: 1;
+    color: #666;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 0px 4px;/*
+    height: 33px;
+    line-height: 33px; */
+}
+.el-pager li.active+li {
+    border: 1px solid #ccc;
+}
+.el-pager .more::before {
+    line-height: 12px;
+    color: #666;
+}
+.el-pager li.btn-quicknext, .el-pager li.btn-quickprev {
+    line-height: 17px;
+    /* line-height: 28px; */
+    color: #303133;
+    border:none;
+}
+.el-pager li.active {
+    color: #fff;
+    cursor: default;
+    background: #ffbb20;
+    border: none;
+}
+.el-pager li:hover {
+    color: #666;
+}
+.el-pager li.active:hover {
+    color: #fff;
+}
+.el-pagination button:hover {
+    color: #666;
+}
+.el-pagination .btn-next, .el-pagination .btn-prev {
+
+    color: #666;
+}
+.el-pagination .btn-next[disabled="disabled"]:hover,.el-pagination .btn-prev[disabled="disabled"]:hover{
+        color: #c0c4cc;
+}

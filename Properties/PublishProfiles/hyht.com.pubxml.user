@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\net_working\发布\hyft\com</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>03/19/2018 09:41:20</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>03/19/2018 09:41:20</publishTime>
+    </File>
+    <File Include="bin/Chinapnr.dll">
+      <publishTime>03/07/2018 11:52:54</publishTime>
+    </File>
+    <File Include="bin/HYFT.Com.dll">
+      <publishTime>03/19/2018 09:41:14</publishTime>
+    </File>
+    <File Include="bin/HYFT.Domain.dll">
+      <publishTime>03/19/2018 09:41:13</publishTime>
+    </File>
+    <File Include="bin/HYFT.EBQ.SDK.dll">
+      <publishTime>03/19/2018 09:41:12</publishTime>
+    </File>
+    <File Include="bin/HYFT.HuiFu.dll">
+      <publishTime>03/19/2018 09:41:12</publishTime>
+    </File>
+    <File Include="bin/HYFT.Service.dll">
+      <publishTime>03/19/2018 09:41:13</publishTime>
+    </File>
+    <File Include="bin/HYHT.Com.dll">
+      <publishTime>09/04/2017 21:52:00</publishTime>
+    </File>
+    <File Include="bin/HYHT.Domain.dll">
+      <publishTime>09/04/2017 18:25:37</publishTime>
+    </File>
+    <File Include="bin/HYHT.HuiFu.dll">
+      <publishTime>09/04/2017 18:25:37</publishTime>
+    </File>
+    <File Include="bin/HYHT.Service.dll">
+      <publishTime>09/04/2017 18:25:39</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xmlworker.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/07/2018 12:12:28</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/07/2018 12:12:24</publishTime>
+    </File>
+    <File Include="bin/Skyline.Common.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/Skyline.Email.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/07/2018 12:12:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/07/2018 12:12:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/07/2018 12:12:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>03/07/2018 12:12:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>03/07/2018 12:12:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>03/07/2018 12:12:29</publishTime>
+    </File>
+    <File Include="bin/TopSdk.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/WeiCai.HuiFu.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/WeiFos.Core.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/WeiFos.ORM.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="bin/WeiFos.WeChat.dll">
+      <publishTime>03/07/2018 12:12:56</publishTime>
+    </File>
+    <File Include="Config/AppSettings.config">
+      <publishTime>03/07/2018 12:11:45</publishTime>
+    </File>
+    <File Include="Config/area.xml">
+      <publishTime>03/07/2018 12:11:45</publishTime>
+    </File>
+    <File Include="Config/ConnectionStrings.config">
+      <publishTime>03/07/2018 12:11:45</publishTime>
+    </File>
+    <File Include="Config/ResXmlConfig.xml">
+      <publishTime>03/07/2018 12:11:45</publishTime>
+    </File>
+    <File Include="MerPrK531001.key">
+      <publishTime>05/31/2016 12:27:19</publishTime>
+    </File>
+    <File Include="MerPrK531618.key">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="PgPubk.key">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>03/19/2018 09:41:16</publishTime>
+    </File>
+    <File Include="Views/CallBack/CreditBid.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/MerWithdrawal.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/Recharge.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/Register.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/TenderCancle.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/UnFreeze.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/UnFreezeRedirect.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/VoucherWithdrawal.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/CallBack/Withdrawal.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/CreditContract.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/CreditContractWithoutSign.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/CreditContractWithoutSign_.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/CreditContract_.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/PlatformContract.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Contract/PlatformContractWithoutSign.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Faq/Advantage.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/App.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Architecture.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Company.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Faq/ContactUs.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/ContentPage.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Detail.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/GroupIntroduction.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/HelperList.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Index.cshtml">
+      <publishTime>03/15/2018 09:31:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Interior.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/legalpolicy.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Notice.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Noviceguide.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Qualification.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/safety.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Faq/Security.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper01.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper02.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper03.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper04.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper05.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper06.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper07.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Helper/Helper08.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Home/AboutUs.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/ActivityBidRanking.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/Activity_11_11.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/Activity_12_12.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/ArticleDetail.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/ArticleList.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/Calculation.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/ChannelStatistics.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/09/2018 12:20:01</publishTime>
+    </File>
+    <File Include="Views/Home/Joined.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/NewYearActivity.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Home/YearEndFeedback.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/AutoBid.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/Detail.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/ExperienceBid.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/ExperienceDetail.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/GuaranteeCompony.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/List.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/RiskDisclosure.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Invest/yifengInfor.cshtml">
+      <publishTime>12/21/2017 18:58:23</publishTime>
+    </File>
+    <File Include="Views/Loan/Index.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/BindEmail.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/BindNewEmail.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/Forget.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/Login.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/Modify.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/OpenAccount.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Passport/Register.cshtml">
+      <publishTime>03/19/2018 09:40:45</publishTime>
+    </File>
+    <File Include="Views/Passport/RegSuccess.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/Redirect/OpenAccount.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_About/_Layout.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_FooterSimple.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Helper/_Layout.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutNoHeader.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_News/_Layout.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Script.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_User/_Layout.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_User/_LeftMenu.cshtml">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Views/User/Agent.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/BindCard.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Card.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Detailed.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Email.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Funds.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Investment.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/InvestRecord.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/MerchantsRecharge.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Mobile.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Myclient.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/MyHFAccount.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/MyRcmdFlow.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/MyVoucher.cshtml">
+      <publishTime>03/14/2018 10:22:43</publishTime>
+    </File>
+    <File Include="Views/User/Password.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Recharge.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/RechargeRecord.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Recovered.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Recycling.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/SafetyCertification.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Spread.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/TenderCancle.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Voucher.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/VoucherWithdrawal.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/User/Withdrawal.cshtml">
+      <publishTime>03/15/2018 17:41:54</publishTime>
+    </File>
+    <File Include="Views/User/WithdrawalRecord.cshtml">
+      <publishTime>03/07/2018 12:11:44</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>03/07/2018 12:11:43</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/12/2018 14:54:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

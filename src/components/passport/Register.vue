@@ -1,0 +1,105 @@
+<template>
+    <div>
+        <el-form :model="regForm" :rules="rules" label-width="100px" ref="regForm">
+            <el-form-item label="用户名" prop="LoginName">
+                <el-input v-model="regForm.LoginName"></el-input>
+            </el-form-item>
+            <el-form-item label="密码" prop="Password">
+                <el-input v-model="regForm.Password" type="password"></el-input>
+            </el-form-item>
+            <el-form-item label="确认密码" prop="CheckPassword">
+                <el-input v-model="regForm.CheckPassword" type="password"></el-input>
+            </el-form-item>
+            <el-form-item label="短信验证码" prop="Captcha">
+                <el-input v-model="regForm.Captcha" type="number"></el-input>
+            </el-form-item>
+            <el-form-item label="邀请码" prop="RcmdID">
+                <el-input v-model="regForm.RcmdID" type="number"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary" @click="submitForm('regForm')">注册</el-button>
+                <el-button @click="resetForm('regForm')" >重置</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+</template>
+
+<script>
+import api from '../../api'
+export default {
+    data(){
+        //自定义验证规则
+        let validatePass1 = (rule, value, callback) => {
+            // 6-16位, 数字, 字母, 字符至少包含两种, 同时不能包含中文和空格
+            let reg = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^[^\s\u4e00-\u9fa5]{6,16}$/;
+            if(!reg.test(value)){
+                callback(new Error('密码长度需6-16位，且包含字母和字符'));
+            }else{
+                callback();
+            }
+        };
+        //验证密码是否重复
+        let validatePass2 = (rule, value, callback) => {
+            if(value !== this.regForm.Password){
+                callback(new Error('两次密码输入不一致'));
+            }else{
+                callback();
+            }
+        };
+        return {
+            regForm: {
+                LoginName: '',
+                Password: '',
+                CheckPassword: '',
+                Captcha:'',
+                RcmdID:''
+            },
+            rules: {
+                LoginName: [
+                    { required: true, message: '用户名不能少', trigger: 'blur'},
+                    { min: 6, max: 16, message: '用户名在6到16位之间', trigger: 'blur'}
+                ],
+                Password: [
+                    { required: true, message: '请输入密码', trigger: 'blur'},
+                    { validator: validatePass1, trigger: 'blur'}
+                ],
+                Captcha: [
+                    { required: true, message: '请输入验证码', trigger: 'blur'},
+                    { min: 4, max: 4, message: '请输入验证码', trigger: 'blur'}
+                ]
+            }
+        }
+    },
+    methods: {
+        resetForm(formName){
+            this.$refs[formName].resetFields();
+        },
+        submitForm(formName){
+            this.$refs[formName].validate((valid) => {
+                if(valid){ //验证通过
+                    api.userRegister(this.regForm)
+                        .then((data) => { 
+                            if(data.basis.Status == 200){
+                                this.$message({
+                                    type: 'success',
+                                    message: '注册成功'
+                                });
+                            }else{
+                                this.$message({
+                                    type: 'info',
+                                    message: data.basis.Msg
+                                });
+                            }
+                        });
+                }else{ //验证不通过
+                    return false;
+                }
+            });
+        }
+    }
+}
+</script>
+
+<style scoped>
+    
+</style>
