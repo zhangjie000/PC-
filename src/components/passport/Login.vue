@@ -1,103 +1,194 @@
 <template>
-    <div>
-         <el-row>
-            <el-col :span="10" :offset="7">
-                <el-tabs v-model="activeName">
-
-                    <el-tab-pane label="登录" name="login">
-                        <el-form :model="loginForm" :rules="rules" label-width="100px" ref="loginForm">
-                            <el-form-item label="用户名" prop="LoginName">
-                                <el-input v-model="loginForm.LoginName"></el-input>
-                            </el-form-item>
-                            <el-form-item label="密码" prop="Password">
-                                <el-input v-model="loginForm.Password" type="Password"></el-input>
-                            </el-form-item>
-                            <el-form-item>
-                                <el-button type="primary" @click="submitForm('loginForm')">提交</el-button>
-                                <el-button @click="resetForm('loginForm')">重置</el-button>
-                            </el-form-item>
-                        </el-form>
-                    </el-tab-pane>
-
-                    <el-tab-pane label="注册" name="register">
-                        <Register></Register>
-                    </el-tab-pane>
-
-                </el-tabs>
-            </el-col>
-        </el-row>
+ <div class="content-login">
+    <div class="banxin clearfix" style="position:relative;">
+        <div class="login-box  clearfix">
+            <h2 class='login-title'>登录汇银富通</h2>
+            <p class="login-noAcoount">
+                <span>还没有账号？</span>
+                <a href="/passport/register">免费注册</a>
+            </p>
+            <p class="position"><i class="userNameIcon"></i><input class="login-inputStyle" id="LoginName" type="text" placeholder="请输入手机号" name=""></p>
+            <p class="login-prompt" id="LoginNameError" style="visibility:hidden;"><i class="promptIcon"></i>请输入手机号码</p>
+            <p class="position"><i class="userPasswordIcon"></i><input class="login-inputStyle"  id="Psw" type="password" placeholder="请输入密码" name=""></p>
+            <p class="login-prompt" id="PswErroer" style="visibility:hidden;"><i class="promptIcon"></i>请输入6~20位密码</p>
+            <p class="login-remember">
+                <input type="checkbox" id="remeber" /><label  for="remeber">记住用户名</label>
+                <a class="fr" href="/passport/forget">忘记密码？</a>
+            </p>
+            <p><a class="login-buttom" href="javascript:;" id="LoginBtn">立即登录</a></p>
+        </div>
     </div>
+</div>
 </template>
 <script>
-import api from '../../api'
-//引入注册组件
-import Register from './Register.vue'
 export default {
     data(){
         return {
-            activeName: 'login', //选项卡
-            loginForm: {        //表单v-model的值
-                LoginName: '15018543578',
-                Password: 'a11111'
-            },
-            rules: { //验证规则
-                LoginName: [
-                    { required: true, message: '用户名不能少', trigger: 'blur'},
-                    { min: 6, max: 16, message: '用户名在6到16位之间', trigger: 'blur'}
-                ],
-                Password: [
-                    { required: true, message: '请输入密码', trigger: 'blur'}
-                ]
-            }
+
         }
     },
     mounted:function(){
-         let redirectUrl = decodeURIComponent(this.$route.query.redirect || '/');
-         console.log( redirectUrl );
-    },
-    methods: {
-        resetForm(formName){
-            this.$refs[formName].resetFields();
-        },
-        submitForm(formName){
-            this.$refs[formName].validate((valid) => {
-                if(valid){ //验证通过
-                    let opt = this.loginForm;
-                    api.userLogin(opt).then((data) => {
 
-                        //console.log( data );
-                        if(data.basis.Status == 200){
-                            this.$message({
-                                type: 'success',
-                                message: '登录成功'
-                            })
-                            let token = data.result.Token;
-                            this.$store.dispatch('UserLogin', token);
-                            //如果用户手动输入"/"那么会跳转到这里来，即this.$route.query.redirect有参数
-                            let redirectUrl = decodeURIComponent(this.$route.query.redirect || '/');
-                            //跳转到指定的路由
-                            this.$router.push({
-                                path: redirectUrl
-                            });
-                        }else{
-                            this.$message({
-                                type: 'info',
-                                message: data.basis.Msg
-                            });
-                        }
-                    });
-                }else{
-                    //验证不通过
-                    return false;
-                }
-            });
-        }
     },
-    components: {
-        Register
-    }
+
 }
 </script>
 <style scoped>
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #BBB;
+    font-family: "microsoft YaHei"
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #BBB;
+    font-family: "microsoft YaHei"
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #BBB;
+    font-family: "microsoft YaHei"
+}
+/* ::-ms-input-placeholder { Internet Explorer 10+
+    color:    #888;
+} */
+
+button {
+    background-color: transparent;
+    border: none;
+    font-family: "Microsoft YaHei";
+    font-weight: 100;
+}
+/* 登录样式 */
+.content-login {
+    width: 100%;
+    height: 618px;
+    background: url(../../assets/images/passport/banner.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.content-login .login-box {
+    width: 399px;
+    height: 422px;
+    background-color: #fff;
+    margin-top: 98px;
+    padding: 0 44px;
+    position: absolute;
+    right:0px;
+    top:50%;
+}
+
+.content-login .login-title {
+    font-size: 20px;
+    color: #282828;
+    font-weight: normal;
+    padding-top: 33px;
+}
+
+.content-login .login-noAcoount {
+    text-align: right;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.content-login .login-noAcoount span {
+    font-size: 14px;
+    color: #888;
+}
+
+.content-login .login-noAcoount a {
+    font-size: 14px;
+    color: #ff7f00;
+    text-decoration: none;
+}
+
+.content-login .login-noAcoount a:hover {
+    text-decoration: none;
+}
+
+.content-login .login-inputStyle {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    padding-left: 69px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #bbb;
+}
+
+.userNameIcon {
+    height: 44px;
+    width: 57px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    border-right: 1px solid #ddd;
+    background: url(../../assets/images/passport/userNameIcon.png) no-repeat;
+    background-position: center;
+}
+
+.userPasswordIcon {
+    height: 44px;
+    width: 57px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    border-right: 1px solid #ddd;
+    background: url(../../assets/images/passport/userPasswordIcon.png) no-repeat;
+    background-position: center;
+}
+
+.position {
+    position: relative;
+}
+
+.content-login .login-prompt {
+    color: #6CB7FF;
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+}
+
+.login-prompt .promptIcon {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url(../../assets/images/passport/promptIcon.png);
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.login-remember {
+    padding-top: 26px;
+}
+
+.login-remember, .login-remember a {
+    color: #888;
+    font-size: 14px;
+    padding-bottom: 17px;
+}
+
+.login-remember input {
+    margin-right: 5px;
+}
+
+.login-buttom {
+    width: 100%;
+    height: 44px;
+    background-color: #f90;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.login-buttom:hover {
+    background-color: #ff9900;
+}
+
+
 
 </style>

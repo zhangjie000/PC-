@@ -72,6 +72,22 @@ h1,h2,h3,h4,h5,h6{font-weight:normal;}
     display:inline-block;
     vertical-align: top;
 }
+.fontSize22 {
+    font-size: 22px;
+}
+.ml0 {
+    margin-left: 0px !important;
+}
+/* 按钮颜色 start*/
+.CommonBtnBGYellow {
+    background-color: #ffbb20;
+    cursor: pointer;
+}
+
+.CommonBtnBGYellow:hover {
+    background-color: #ff9900;
+}
+/* 按钮颜色 end*/
 /* 头部样式 */
 .header{
     background: #fafafa;

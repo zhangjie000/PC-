@@ -41,7 +41,7 @@
          <!-- 列表内容 -->
     <div class="banxin background-FFF investContentListBoxStyle">
 
-        <div id="listTable">
+        <div id="listTable" @click="goDetails">
                 <div class='investContentListBox' >
                     <h3 class='investContentTitle'>票据质押贷 <span class="nthOfType1">(2018062004)</span><span class="nthOfType2">一次性还本付息</span><!-- <span class="nthOfType2">定向项目</span> --></h3>
                     <div class="investContentList">
@@ -73,102 +73,7 @@
                     </div>
                 </div>
         </div>
-         <div id="listTable">
-                <div class='investContentListBox' >
-                    <h3 class='investContentTitle'>票据质押贷 <span class="nthOfType1">(2018062004)</span><span class="nthOfType2">一次性还本付息</span><!-- <span class="nthOfType2">定向项目</span> --></h3>
-                    <div class="investContentList">
-                        <table class='investContentListTable dib'>
-                            <tbody>
-                                <tr class="investContentListTableFirstChild">
-                                    <td>12元</td>
-                                    <td>12天</td>
-                                    <td class="ListTablenth3"><span class="ListTablenth3Font">11</span><span>40%</span></td>
-                                    <td>12元</td>
-                                </tr>
-                                <tr class="investContentListTableLastChild">
-                                    <td>借款金额</td>
-                                    <td>项目期限</td>
-                                    <td>预期年利率</td>
-                                    <td>起投金额</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="investContentListProgerss dib">
-                            <div class="newWelfareSliderBG sliderBG dib" style="width:166px;">
-                                <div class="sliderColor" style="width:40%">
-                                </div>
-                                <span class="slidePercent" style="color:#333;">40%</span>
-                            </div>
-                            <a href="#"  class="investDetails investbidNow timeBar">立即投标</a>
-                        </div>
 
-                    </div>
-                </div>
-        </div>
-         <div id="listTable">
-                <div class='investContentListBox' >
-                    <h3 class='investContentTitle'>票据质押贷 <span class="nthOfType1">(2018062004)</span><span class="nthOfType2">一次性还本付息</span><!-- <span class="nthOfType2">定向项目</span> --></h3>
-                    <div class="investContentList">
-                        <table class='investContentListTable dib'>
-                            <tbody>
-                                <tr class="investContentListTableFirstChild">
-                                    <td>12元</td>
-                                    <td>12天</td>
-                                    <td class="ListTablenth3"><span class="ListTablenth3Font">11</span><span>40%</span></td>
-                                    <td>12元</td>
-                                </tr>
-                                <tr class="investContentListTableLastChild">
-                                    <td>借款金额</td>
-                                    <td>项目期限</td>
-                                    <td>预期年利率</td>
-                                    <td>起投金额</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="investContentListProgerss dib">
-                            <div class="newWelfareSliderBG sliderBG dib" style="width:166px;">
-                                <div class="sliderColor" style="width:40%">
-                                </div>
-                                <span class="slidePercent" style="color:#333;">40%</span>
-                            </div>
-                            <a href="#"  class="investDetails investbidNow timeBar">立即投标</a>
-                        </div>
-
-                    </div>
-                </div>
-        </div>
-         <div id="listTable">
-                <div class='investContentListBox' >
-                    <h3 class='investContentTitle'>票据质押贷 <span class="nthOfType1">(2018062004)</span><span class="nthOfType2">一次性还本付息</span><!-- <span class="nthOfType2">定向项目</span> --></h3>
-                    <div class="investContentList">
-                        <table class='investContentListTable dib'>
-                            <tbody>
-                                <tr class="investContentListTableFirstChild">
-                                    <td>12元</td>
-                                    <td>12天</td>
-                                    <td class="ListTablenth3"><span class="ListTablenth3Font">11</span><span>40%</span></td>
-                                    <td>12元</td>
-                                </tr>
-                                <tr class="investContentListTableLastChild">
-                                    <td>借款金额</td>
-                                    <td>项目期限</td>
-                                    <td>预期年利率</td>
-                                    <td>起投金额</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="investContentListProgerss dib">
-                            <div class="newWelfareSliderBG sliderBG dib" style="width:166px;">
-                                <div class="sliderColor" style="width:40%">
-                                </div>
-                                <span class="slidePercent" style="color:#333;">40%</span>
-                            </div>
-                            <a href="#"  class="investDetails investbidNow timeBar">立即投标</a>
-                        </div>
-
-                    </div>
-                </div>
-        </div>
        <div class="block" :style="{display:total==0?'none':'block'}">
           <el-pagination
             layout="prev, pager, next"
@@ -221,6 +126,10 @@ export default{
         },
         handleSizeChange(event){
             console.log(event)
+        },
+        /*调转到详情页面*/
+        goDetails(){
+            this.$router.push({path:'/investDetails'})
         }
     }
 }
@@ -395,9 +304,5 @@ export default{
 .InPayment {
     background-color: #bdbdbd;
 }
-/*
-.investContentListProgerss .timeBar {
-    font-size: 12px;
-} */
 
 </style>

@@ -77,7 +77,7 @@
             <h3>体验标</h3>
         </div>
 
-        <div class='newWelfareBox newWelfareCenter' onclick="window.location='https://www.hyft88.com/invest/experiencedetail-10179'">
+        <div class='newWelfareBox newWelfareCenter' @click="experienceDetail">
 
             <div class="newWelfareCenterTop">
                 <h3>汇银富通体验标 </h3>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="newWelfareCenterbtnBG" >
                     <div class="newWelfareCenterbtnMove"></div>
-                    <a href="https://www.hyft88.com/invest/experiencedetail-10179" id="newpro_0Link" class="newWelfareCenterBottomBox newWelfareCenterPosition newWelfareCenterbtn newWelfareCenterbtn">购买</a>
+                    <a href="javascript:;" id="newpro_0Link" class="newWelfareCenterBottomBox newWelfareCenterPosition newWelfareCenterbtn newWelfareCenterbtn">购买</a>
                 </div>
 
 
@@ -610,6 +610,10 @@ export default {
         mouseOVER(index){
             this.bidCententIndex=index;
 
+        },
+        /*体验标详情页面调转*/
+        experienceDetail(){
+            this.$router.push({path:'/experienceDetail'})
         }
     }
 

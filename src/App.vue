@@ -10,11 +10,12 @@
                 市场有风险，选择需谨慎
             </p>
             <div class="fr headerNav">
-                <!--<router-link to="/Login" class="loginBtn" >登录</router-link> -->
-                <router-link to="/Login" class="loginYes" >15027337467</router-link>
+                <router-link to="/login" class="loginBtn" >登录</router-link>
+            <!--     <router-link to="/Login" class="loginYes" >15027337467</router-link> -->
                 <span class="space"></span>
-                <!-- <a class="registerBtn" href="javascript:;">注册</a> -->
-                <a class="loginYes" href="javascript:;">安全退出</a>
+
+                 <router-link to="/Register" class="registerBtn" >注册</router-link>
+                <!-- <a class="loginYes" href="javascript:;">安全退出</a> -->
                 <span class="space"></span>
                 <a class="helperBtn" href="javascript:;">帮助中心</a>
                 <div class="IpApp">
@@ -50,7 +51,7 @@
               <router-link to="/safetyIndex">安全保障</router-link>
             </li>
             <li >
-              <a href="javascript:;">关于我们</a>
+              <router-link to="/aboutUs">关于我们</router-link>
             </li>
             <li class="last">
               <a href="javascript:;">
@@ -147,75 +148,70 @@
     </div>
     <!-- 右侧悬浮 -->
     <div id="AdLayer" class="hidden-xs hidden-sm xuanfu ng-scope">
-    <div class="xf xuanfu-sm" id="hyft_online_kf">
-        <div style="height:43px;padding-top:3px;">
-            <a style="display: inline-block;">
-                <img style="margin-top:7px;" src="./assets/images/common/float_kf.png" />
+        <div class="xf xuanfu-sm" >
+            <div style="height:43px;padding-top:3px;">
+                <a style="display: inline-block;">
+                    <img style="margin-top:7px;" src="./assets/images/common/float_kf.png" />
+                </a>
+            </div>
+            <div style="color:#fff;font-size:14px;">
+                在线客服
+            </div>
+
+        </div>
+        <div class="xf xuanfu-kf" @mouseover="kfBlock" @mouseout="kfNone">
+            <div style="height:40px;padding-top:5px;">
+                <img style="margin-top: 3px;" src="./assets/images/common/gfq.png" />
+            </div>
+            <div style="color:#fff;margin-top:2px;font-size:14px;">
+                客服热线
+            </div>
+            <div  class="xuanfu-h" ref="kfTelBox" style="display:none;">
+                <div>
+                    <i class="xf-xian"></i>
+                    <h5 style="text-align:center;"><i class="xf-dh" style="font-size:14px;"></i>全国客服</h5>
+                    <h4 style="text-align:center;padding:5px 0px;">400-040-5828</h4>
+                    <span style="font-size:14px;text-align:center;display:block">服务时间：09:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="xf xuanfu-sm" @mouseover="AppLoadBlock" @mouseout="AppLoadNone">
+            <div style="height:43px;padding-top:3px;">
+                <img style="margin-top:4px;" src="./assets/images/common/float_phone.png" />
+            </div>
+            <div style="color:#fff;font-size:14px;">
+                APP下载
+            </div>
+            <div  class="xuanfu-h" ref="AppLoad" style="display: none;">
+                <div style="text-align:center;">
+                    <img style="width:150px;height:150px;" src="./assets/images/common/float_app.png" />
+                    <h5>扫描下载App</h5>
+                </div>
+            </div>
+        </div>
+        <div class="xf xuanfu-sm" @mouseover="smOpenBlock" @mouseout="smOpenNone">
+            <div style="height:43px;padding-top:3px;">
+                <img style="margin-top:5px;" src="./assets/images/common/float_wx.png" />
+            </div>
+            <div style="color:#fff;font-size:14px;">
+                公众号
+            </div>
+            <div  class="xuanfu-h" ref="smOpen" style="display: none;">
+                <div style="text-align:center;">
+                    <img style="width:150px;height:150px;" src="./assets/images/common/fwh.jpg" />
+                    <h5>扫描官方微信公众号</h5>
+                </div>
+            </div>
+        </div>
+        <div class="to-top" ref="toTop" @click="scrollTop0" style="padding:0px;display:none;">
+            <a target="_self" href="javaScript:;" style="height:100%;padding:10px 0px;">
+                <img style="" src="./assets/images/common/float_top.png" />
+                <div style="color:#fff;font-size:14px; margin-top:0px;">
+                    返回顶部
+                </div>
             </a>
         </div>
-        <div style="color:#fff;font-size:14px;">
-            在线客服
-        </div>
-
     </div>
-    <div class="xf xuanfu-kf" onmouseover="display_content(1,false)" onmouseout="display_content(1,true)">
-        <div style="height:40px;padding-top:5px;">
-            <img style="margin-top: 3px;" src="./assets/images/common/gfq.png" />
-        </div>
-        <div style="color:#fff;margin-top:2px;font-size:14px;">
-            客服热线
-        </div>
-        <div id="AdLayer_01" class="xuanfu-h" style="display:none;">
-            <div>
-                @*<h5 style="font-size:14px;">官方投资理财群</h5>
-                    <a href="//shang.qq.com/wpa/qunwpa?idkey=5fd840202e4112e5aa023b9c693bc629ddea166dbc520db7b650e15d38da0ef1" target="_blank" class="border-a">新手群：<span class="font16">114351013</span></a>
-                    <a href="//shang.qq.com/wpa/qunwpa?idkey=7c47d14adbc0f8f8dadafa33f6d23d482945b1382126c59799b5acb9472e0933" target="_blank" class="border-a">投资群：<span class="font16">650436127</span></a>
-                    <span class="info" style="font-size:14px;display:block;padding:0px 0px;margin-top:0px;height:30px;line-height:30px;">（投资群限投资5千以上）</span>*@
-                <i class="xf-xian"></i>
-                <h5 style="text-align:center;"><i class="xf-dh" style="font-size:14px;"></i>全国客服</h5>
-                <h4 style="text-align:center;padding:5px 0px;">400-040-5828</h4>
-                <span style="font-size:14px;text-align:center;display:block">服务时间：09:00-18:00</span>
-            </div>
-        </div>
-    </div>
-    <div class="xf xuanfu-sm" onmouseover="display_content(2,false)" onmouseout="display_content(2,true)">
-        <div style="height:43px;padding-top:3px;">
-            <img style="margin-top:4px;" src="./assets/images/common/float_phone.png" />
-        </div>
-        <div style="color:#fff;font-size:14px;">
-            APP下载
-        </div>
-        <div id="AdLayer_02" class="xuanfu-h" style="display: none;">
-            <div style="text-align:center;">
-                <img style="width:150px;height:150px;" src="./assets/images/common/float_app.png" />
-                <h5>扫描下载App</h5>
-            </div>
-        </div>
-    </div>
-    <div class="xf xuanfu-sm" onmouseover="display_content(3,false)" onmouseout="display_content(3,true)">
-        <div style="height:43px;padding-top:3px;">
-            <img style="margin-top:5px;" src="./assets/images/common/float_wx.png" />
-        </div>
-        <div style="color:#fff;font-size:14px;">
-            公众号
-        </div>
-        <div id="AdLayer_03" class="xuanfu-h" style="display: none;">
-            <div style="text-align:center;">
-                <img style="width:150px;height:150px;" src="./assets/images/common/fwh.jpg" />
-                <h5>扫描官方微信公众号</h5>
-            </div>
-        </div>
-    </div>
-    <div class="to-top" id="toTop" style="padding:0px;display:none;">
-        <a target="_self" href="javaScript:;" style="height:100%;padding:10px 0px;">
-            <img style="" src="./assets/images/common/float_top.png" />
-            <div style="color:#fff;font-size:14px; margin-top:0px;">
-                返回顶部
-            </div>
-        </a>
-
-    </div>
-</div>
   </div>
 </template>
 
@@ -251,11 +247,12 @@ export default {
         },
 
       ],
-      linkUP:true
+      linkUP:true,
+      scrollTop:0
     }
   },
   mounted(){
-
+    window.addEventListener("scroll",this.handleScroll);
   },
   methods:{
     slideUp() {
@@ -297,7 +294,58 @@ export default {
         this.linkUP=true
       }
 
+    },
+    /*客服热线显示隐藏*/
+    kfBlock(){
+      this.$refs.kfTelBox.style.display="block"
+    },
+    kfNone(){
+      this.$refs.kfTelBox.style.display="none"
+    },
+    /*APP下载显示隐藏*/
+    AppLoadBlock(){
+      this.$refs.AppLoad.style.display="block"
+    },
+    AppLoadNone(){
+      this.$refs.AppLoad.style.display="none"
+    },
+    /*公众号显示隐藏*/
+    smOpenBlock(){
+      this.$refs.smOpen.style.display="block"
+    },
+    smOpenNone(){
+      this.$refs.smOpen.style.display="none"
+    },
+    /*返回顶部*/
+    handleScroll(){
+      this.scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if(this.scrollTop>50){
+        this.$refs.toTop.style.display='block';
+      }else {
+        this.$refs.toTop.style.display='none';
+      }
+    },
+    /*点击返回到顶部*/
+    scrollTop0(){
+      this.toTop(this.scrollTop)
+    },
+    toTop(distance){
+      //获得当前高度
+      let step =distance/35;
+      //每步的距离
+      (function jump(){
+        if(distance > 0){
+        distance-=step;
+        window.scrollTo(0,distance);
+        setTimeout(jump,10)
+        }
+      })();
     }
+
+
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
 }
@@ -306,7 +354,7 @@ export default {
 <style>
 
 .xuanfu {
-    bottom: 360px;
+    bottom: 460px;
     height: 100px;
     position: fixed;
     right: 22px;
@@ -345,10 +393,10 @@ export default {
     cursor: default;
     display: none;
     height: auto;
-    min-height: 138px;
+   /*  min-height: 138px; */
     position: absolute;
     right: 64px;
-    top: -32px;
+    top: -14px;
     width: 190px;
     z-index: 200;
 }
